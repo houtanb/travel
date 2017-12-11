@@ -3,21 +3,49 @@ $(function () {
 
     const visited_countries = [
         'ae',  // UAE
-        'au',  // Australia
+        'at',  // Austria
+        'ba',  // Bosnia
+        'be',  // Belgium
+        'br',  // Brazil
+        'bh',  // Bahrain
+        'bs',  // Bahamas
         'ca',  // Canada
         'ch',  // Switzerland
+        'co',  // Colombia
+        'cz',  // Czech Republic
         'de',  // Germany
+        'dk',  // Denmark
+        'eg',  // Egypt
+        'es',  // Spain
+        'fi',  // Finland
         'fr',  // France
         'gb',  // Britain
-        'in',  // India
-        'is',  // Iceland
+        'gr',  // Greece
+        'hr',  // Croatia
+        'hu',  // Hungary
+        'id',  // Indonesia
+        'ir',  // Iran
+        'it',  // Italy
+        'ma',  // Morocco
+        'mm',  // Myanmar
+        'mx',  // Mexico
         'my',  // Malaysia
-        'np',  // Nepal
+        'nl',  // Netherlands
+        'om',  // Oman
+        'pt',  // Portugal
+        'qt',  // Qatar
+        'ro',  // Romania
         'sg',  // Singapore
+        'si',  // Slovenia
+        'sm',  // San Marino
         'th',  // Thailand
-        'us'  // US
+        'tr',  // Turkey
+        'ua',  // Ukraine
+        'us',  // US
+        'va',  // Vatican
+        'za'   // South Africa
     ]
-
+/*
     const visited_states_in_india = [
         // 19/35
         'in-2984',  // Gujarat
@@ -40,25 +68,25 @@ $(function () {
         'in-ut',  // Utrakhand
         'in-wb'  // West Bengal
     ]
-
+*/
     const visited_states_in_us = [
         // 16/50
-        'us-al',  // Alabama
-        'us-az',  // Arizona
         'us-ca',  // California
+        'us-dc',  // DC
         'us-fl',  // Florida
         'us-ga',  // Georgia
-        'us-ky',  // Kentucky
+        'us-il',  // Illinois
         'us-ma',  // Massachusetts
+        'us-md',  // Maryland
+        'us-mn',  // Minnesota
+        'us-oh',  // Ohio
         'us-nj',  // New Jersey
-        'us-nv',  // Nevada
         'us-ny',  // New York
         'us-nc',  // North Carolina
-        'us-or',  // Oregon
-        'us-sc',  // South Carolina
-        'us-tn',  // Tennessee
-        'us-wa',  // Washington
-        'us-wi'  // Wisconsin
+        'us-nv',  // Nevada
+        'us-pa',  // Pennsylvania
+        'us-ri',  // Rhode Island
+        'us-va'   // Virginia
     ];
 
     function getDrilldown(data, visited) {
@@ -73,9 +101,9 @@ $(function () {
 
     var us_data =  Highcharts.geojson(Highcharts.maps['countries/us/us-all']);
 
-    var india_data =  Highcharts.geojson(Highcharts.maps['countries/in/custom/in-all-disputed']);
+//    var india_data =  Highcharts.geojson(Highcharts.maps['countries/in/custom/in-all-disputed']);
 
-    console.log(india_data);
+//    console.log(india_data);
 
     // Set drilldown pointers
     $.each(world_data, function (i) {
@@ -85,13 +113,15 @@ $(function () {
                 us_data,
                 visited_states_in_us);
             this.drilldownLabel = 'United States of America';
-        } else if (this.properties[property] == 'in') {
+        }
+        /*
+        else if (this.properties[property] == 'in') {
             this.drilldown = getDrilldown(
                 india_data,
                 visited_states_in_india);
             this.drilldownLabel = 'India';
         }
-
+        */
         this.value = visited_countries.indexOf(this.properties[property]);
     });
 
