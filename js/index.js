@@ -33,7 +33,7 @@ $(function () {
         'nl',  // Netherlands
         'om',  // Oman
         'pt',  // Portugal
-        'qt',  // Qatar
+        'qa',  // Qatar
         'ro',  // Romania
         'sg',  // Singapore
         'si',  // Slovenia
