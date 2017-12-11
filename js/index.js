@@ -157,7 +157,7 @@ $(function () {
             }
         },
         title : {
-            text : 'Around the world!!',
+            text : 'Travel',
         },
 
         subtitle: {
