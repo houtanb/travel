@@ -11,6 +11,7 @@ $(function () {
         'bs',  // Bahamas
         'ca',  // Canada
         'ch',  // Switzerland
+        'cn',  // China
         'co',  // Colombia
         'cz',  // Czech Republic
         'de',  // Germany
