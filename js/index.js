@@ -27,6 +27,7 @@ $(function () {
         'id',  // Indonesia
         'ir',  // Iran
         'it',  // Italy
+        'lb',  // Lebanon
         'ma',  // Morocco
         'mm',  // Myanmar
         'mx',  // Mexico
