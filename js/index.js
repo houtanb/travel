@@ -114,7 +114,7 @@ $(function () {
             this.drilldown = getDrilldown(
                 us_data,
                 visited_states_in_us);
-            this.drilldownLabel = 'United States of America';
+            this.drilldownLabel = 'United States of America (States Visited: ' + visited_states_in_us.length + ')';
         }
         /*
         else if (this.properties[property] == 'in') {
