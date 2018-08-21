@@ -178,12 +178,14 @@ $(function () {
             dataClasses: [{
                 from: -100,
                 to: 0,
-                color: '#E5F5E0',
-                name: 'Pending'
+                //                color: '#E5F5E0',
+                color: '#CCFFCC',
+                name: 'Not yet visited'
             }, {
                 from: 0,
                 to: 100,
-                color: '#31A354',
+                //                color: '#31A354',
+                color: '#A64DFF',
                 name: 'Visited'
             }]
         },
