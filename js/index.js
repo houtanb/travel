@@ -163,7 +163,7 @@ $(function () {
         },
 
         subtitle: {
-            text: 'World',
+            text: 'World (Countries Visited: ' + visited_countries.length + ')',
         },
 
         mapNavigation: {
